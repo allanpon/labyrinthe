@@ -27,6 +27,9 @@ Fini toutes les méthodes dans Objet et Plateau.
 14h -17h30
 Travailler sur calculChemin.
 
-## Samedi 16 Mai
+## Dimanche 16 Mai
 17h45 - 19h
-Fini calculChemin
+Fini calculChemin.
+
+## Samedi 22 Mai
+Fini les méthodes dans Joueur et TestJoueur.
