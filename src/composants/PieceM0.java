@@ -6,7 +6,7 @@ package composants;
  *
  */
 public class PieceM0 extends Piece {
-
+    private int orientationPiece;
     /**
      * A Faire (01/05/21 Allan Ponchaut Finalisée)
      *
@@ -15,6 +15,12 @@ public class PieceM0 extends Piece {
     public PieceM0() {
         // A Modifier !!!
         super(0,false,true,true,false);
+        this.orientationPiece = 0;
+    }
+
+    public PieceM0(int orientationPiece) {
+        super(0,false,true,true,false);
+        this.orientationPiece = orientationPiece;
     }
 
     /**

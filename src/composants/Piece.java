@@ -1,5 +1,6 @@
 package composants;
 
+
 /**
  *
  * Cette classe permet de reprÃ©senter les diffÃ©rentes piÃ¨ces du jeu.
@@ -24,10 +25,12 @@ abstract public class Piece {
     public Piece(int modelePiece,boolean pointEntreeHaut,boolean pointEntreeDroite,boolean pointEntreeBas,boolean pointEntreeGauche){
 
         this.modelePiece = modelePiece;
+        this.pointsEntree = new boolean[4];
         pointsEntree[0] = pointEntreeHaut;
         pointsEntree[1] = pointEntreeDroite;
         pointsEntree[2] = pointEntreeBas;
         pointsEntree[3] = pointEntreeGauche;
+        this.orientationPiece = 0;
 
     }
 
@@ -56,6 +59,7 @@ abstract public class Piece {
             }
         }
         orientationPiece+= 1;
+        this.setOrientation(this.orientationPiece);
     }
 
     // (01/05/21 Antoine Finalisée)
@@ -69,14 +73,57 @@ abstract public class Piece {
     }
 
     /**
-     * A Faire (01/05/2021 Allan Ponchaut EnCours)
+     * A Faire (01/05/2021 Allan Ponchaut Finalisée)
      *
      * MÃ©thode permettant d'orienter une piÃ¨ce vers une orientation spÃ©cifique.
      * @param orientationPiece Un entier correspondant Ã  la nouvelle orientation de la piÃ¨ce.
      */
     public void setOrientation(int orientationPiece){
-        for(int i = 0;i < orientationPiece;i++) {
-            this.rotation();
+        if(getModelePiece() == 0) {
+            if(orientationPiece == 0) {
+                this.setPointsEntree(new boolean[]{false, true, true, false});
+                this.orientationPiece = 0;
+            }
+            else if(orientationPiece == 1) {
+                this.setPointsEntree(new boolean[]{false, false, true, true});
+                this.orientationPiece = 1;
+            }
+            else if(orientationPiece == 2) {
+                this.setPointsEntree(new boolean[]{true, false, false, true});
+                this.orientationPiece = 2;
+            }
+            else if(orientationPiece == 3) {
+                this.setPointsEntree(new boolean[]{true, true, false, false});
+                this.orientationPiece = 3;
+            }
+        }
+        else if(getModelePiece() == 1) {
+            if(orientationPiece == 0) {
+                this.setPointsEntree(new boolean[]{true, false, true, false});
+                this.orientationPiece = 0;
+            }
+            else if(orientationPiece == 1) {
+                this.setPointsEntree(new boolean[]{false, true, false, true});
+                this.orientationPiece = 1;
+            }
+        }
+        else if(getModelePiece() == 2) {
+            if(orientationPiece == 0) {
+                this.setPointsEntree(new boolean[]{true, true, false, true});
+                this.orientationPiece = 0;
+            }
+            else if(orientationPiece == 1) {
+                this.setPointsEntree(new boolean[]{true, true, true, false});
+                this.orientationPiece = 1;
+            }
+            else if(orientationPiece == 2) {
+                this.setPointsEntree(new boolean[]{false, true, true, true});
+                this.orientationPiece = 2;
+            }
+            else if(orientationPiece == 3) {
+                this.setPointsEntree(new boolean[]{true, false, true, true});
+                this.orientationPiece = 3;
+            }
         }
     }
 
@@ -116,7 +163,7 @@ abstract public class Piece {
     }
 
     /**
-     * A Faire (01/05/21 Tout Le Monde EnCours)
+     * A Faire (01/05/21 Tout le monde Finalisée)
      *
      * MÃ©thode permettant de crÃ©er un tableau contenant toutes les piÃ¨ces du jeu (les 50 piÃ¨ces).
      * Le tableau contiendra 20 piÃ¨ces du modÃ¨le 0, 12 piÃ¨ces du modÃ¨le 1 et 18 piÃ¨ces du modÃ¨le 2.
@@ -124,7 +171,7 @@ abstract public class Piece {
      * @return Un tableau contenant toutes les piÃ¨ces du jeu.
      */
     public static Piece[] nouvellesPieces(){
-        Piece pieces[]=null;
+        Piece pieces[]= new Piece[50];
         int i = 0;
         int cpt0 = 0;
         int cpt1 = 0;
@@ -135,6 +182,7 @@ abstract public class Piece {
             if(alea == 0) {
                 if(cpt0 < 20) {
                     pieces[i] = new PieceM0();
+                    pieces[i].setOrientation(Utils.genererEntier(3));
                     cpt0 += 1;
                     i += 1;
                 }
@@ -142,6 +190,7 @@ abstract public class Piece {
             else if(alea == 1) {
                 if(cpt1 < 12) {
                     pieces[i] = new PieceM1();
+                    pieces[i].setOrientation(Utils.genererEntier(1));
                     cpt1 += 1;
                     i += 1;
                 }
@@ -149,6 +198,7 @@ abstract public class Piece {
             else if(alea == 2) {
                 if(cpt2 < 18) {
                     pieces[i] = new PieceM2();
+                    pieces[i].setOrientation(Utils.genererEntier(3));
                     cpt2 += 1;
                     i += 1;
                 }

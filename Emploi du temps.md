@@ -14,3 +14,19 @@ Commencé et fini MaDemoIG.
 
 14h - 16h30
 Fini les méthodes dans Utils, Piece, PieceM0, PieceM1 et PieceM0. Commencé un tout petit peu le main à faire.
+
+## Lundi 3 Mai
+14h - 16h20
+Fini le main de l'étape 2, corrigé les méthodes qui ne fonctionnaient pas.
+
+## Vendredi 14 Mai
+14h - 17h30
+Fini toutes les méthodes dans Objet et Plateau.
+
+## Samedi 15 Mai
+14h -17h30
+Travailler sur calculChemin.
+
+## Samedi 16 Mai
+17h45 - 19h
+Fini calculChemin

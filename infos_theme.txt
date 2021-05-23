@@ -1,3 +1,0 @@
-Thème Simpson
-Allan Ponchaut, Sullyvan Buyse, Antoine Leva, Lucas Girod-Roux 
-{"Duff","Donuts","Crevette","Steak","Milkshake","Caleçon","Sandwich","Skate","Lance-Pierre","Poisson Homer","Milkshake2","Tête de Krusty","Canape","Telephone","ballon de basket","Tétine","Itchy","Scrachy"}
