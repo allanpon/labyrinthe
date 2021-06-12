@@ -14,7 +14,7 @@ import partie.ElementsPartie;
 public class JoueurHumain extends Joueur {
 
 	/**
-	 * Constructeur permettant de créer un joueur à partir de son nom, son type et 
+	 * Constructeur permettant de créer un joueur �  partir de son nom, son type et 
 	 * le numéro de l'image le représentant.
 	 * @param numJoueur Le numéro du joueur.
 	 * @param nomJoueur Le nom du joueur.
@@ -34,7 +34,7 @@ public class JoueurHumain extends Joueur {
 
 	
 	/**
-	 * Saisies de l'orientation de la pièce hors plateau et de l'entrée dans le plateau réalisées à l'aide de l'interface graphique.
+	 * Saisies de l'orientation de la pièce hors plateau et de l'entrée dans le plateau réalisées �  l'aide de l'interface graphique.
 	 */
 	@Override
 	public int[] choisirOrientationEntree(ElementsPartie elementsPartie) {
@@ -46,7 +46,7 @@ public class JoueurHumain extends Joueur {
 
 	
 	/**
-	 * Saisie de la case d'arrivée réalisée à l'aide de l'interface graphique.
+	 * Saisie de la case d'arrivée réalisée �  l'aide de l'interface graphique.
 	 */
 	@Override
 	public int[] choisirCaseArrivee(ElementsPartie elementsPartie) {

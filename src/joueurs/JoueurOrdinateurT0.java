@@ -1,6 +1,9 @@
 package joueurs;
 
 import composants.Objet;
+import composants.Plateau;
+import composants.Utils;
+import partie.ElementsPartie;
 
 
 /**
